@@ -1,0 +1,24 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+authors = ["{{authors}}"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Webframework
+actix-web = { version = "~4.2" }
+
+# Serialization library
+serde = { version = "~1.0", features = ["derive"] }
+chrono = { version = "~0.4" }
+
+# ORM
+rorm = { version = "~0.4", features = ["actix-rustls"] }
+
+# Async runtime
+tokio = { version = "~1.24", features = ["macros", "rt-multi-thread"] }
+
+[features]
+rorm-main = []
